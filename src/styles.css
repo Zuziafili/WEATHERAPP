@@ -1,3 +1,14 @@
+.butt1 {
+  border-radius: 20px;
+  background-color: #7768e4;
+  color: #ffffff;
+  border: 0 solid;
+  padding: 10px 18px;
+  display: inline-block;
+  left: -60px;
+  margin-top: 20px;
+  margin-right: 10px;
+}
 .butt2 {
   border-radius: 20px;
   background-color: #7768e4;
@@ -15,17 +26,6 @@
 .butt2:hover {
   background-color: #4b4190;
   transition: all 100ms ease-in-out;
-}
-.butt1 {
-  border-radius: 20px;
-  background-color: #7768e4;
-  color: #ffffff;
-  border: 0 solid;
-  padding: 10px 18px;
-  display: inline-block;
-  left: -60px;
-  margin-top: 20px;
-  margin-right: 10px;
 }
 
 .weather-container {
@@ -81,31 +81,41 @@ div {
   font-weight: 700;
   line-height: 28px;
 }
-.weather-detail__text {
+#weather-detail__text {
+  color: #878787;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+.li1 {
   color: #878787;
   font-size: 18px;
   font-weight: 300;
   line-height: 20px;
   display: block;
-  padding-left: 2px;
 }
-.precipitation {
-  display: inline;
-  line-height: 24px;
+.li2 {
+  color: #878787;
   font-size: 18px;
-  padding-left: 245px;
+  font-weight: 300;
+  line-height: 20px;
+  display: block;
+  text-transform: capitalize;
 }
-.wind {
-  display: inline;
-  line-height: 24px;
+.li3 {
+  color: #878787;
   font-size: 18px;
-  padding-left: 370px;
+  font-weight: 300;
+  line-height: 20px;
+  display: block;
 }
-.fas.fa-cloud-showers-heavy {
-  display: inline-block;
-  font-size: 45px;
-  padding-right: 5px;
-  color: white;
+.li4 {
+  color: #878787;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 20px;
+  display: block;
 }
 
 .temp {
@@ -142,18 +152,7 @@ div {
   font-size: 25px;
   color: #878787;
 }
-.fas.fa-cloud-sun {
-  font-size: 30px;
-}
-.fas.fa-sun {
-  font-size: 30px;
-}
-.fas.fa-cloud {
-  font-size: 30px;
-}
-.fas.fa-cloud-rain {
-  font-size: 30px;
-}
+
 h5 {
   text-align: center;
 }
@@ -168,6 +167,11 @@ h5 {
   text-align: center;
   font-weight: bold;
 }
+
+.bottom-cardtext::first-letter {
+  text-transform: capitalize;
+}
+
 .celsius {
   display: inline-block;
   font-size: 20px;
@@ -175,9 +179,11 @@ h5 {
   color: #e7ebf6;
   text-decoration: none;
 }
+
 .celsius:hover {
   color: #7768e4;
 }
+
 .fahrenheit {
   display: inline-block;
   font-size: 20px;
@@ -185,9 +191,11 @@ h5 {
   color: #e7ebf6;
   text-decoration: none;
 }
+
 .fahrenheit:hover {
   color: #7768e4;
 }
+
 .slash {
   display: inline-block;
   font-size: 20px;
@@ -195,17 +203,14 @@ h5 {
   padding: 0px 0px;
   color: #7768e4;
 }
-.weather-description {
-  color: #878787;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 20px;
-  display: block;
-  padding-left: 2px;
-}
+
 .github {
   font-family: "Nunito Sans", sans-serif;
   display: block;
   color: #7768e4;
   margin-left: 30px;
+}
+
+.icon {
+  color: white;
 }
