@@ -79,7 +79,6 @@ function displayWeatherCondition(response) {
 }
 
 function displayForecast(response) {
-  console.log(response);
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = null;
 
@@ -91,8 +90,8 @@ function displayForecast(response) {
         <div class="card-body">
             <h5 class="card-title"> ${formatHours(forecast.dt * 1000)}</h5>
             <img src="http://openweathermap.org/img/wn/${
-      forecast.weather[0].icon
-      }@2x.png" class="icon" id="icon">
+              forecast.weather[0].icon
+            }@2x.png" class="icon" id="icon">
             <p class="card-text"> ${Math.round(forecast.main.temp_max)}°C
             </br>
             / ${Math.round(forecast.main.temp_min)}°C
@@ -125,6 +124,9 @@ function searchLocation(position) {
   let apiKey = "64b0395f40c65e6eeb2201c7e7c24827";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function getCurrentLocation(event) {
